@@ -1,0 +1,588 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta charset="utf-8"><link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://img.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+        <script src="https://img.hcharts.cn/highstock/highstock.js"></script>
+        <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+        <script src="https://img.hcharts.cn/highcharts/modules/oldie.js"></script>
+        <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+
+
+		<style type="text/css">
+		    .formuse {
+		      position: relative;
+		      z-index: 1;
+		      background: #FFFFFF;
+		      text-align: center;
+		      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+		    }
+		    .pageuse{
+		   	  position: relative;
+		      z-index: 1;
+		      background: #FFFFFF;
+		      text-align: center;
+		      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+		    }
+		</style>
+    </head>
+    <body>
+		<table border = "0" width="1680" class="pageuse">
+			<tr>
+				<td width = 40px  rowspan='5'>
+				<div id="left_side" style="min-width:30px;height:500px"></div>
+				</td>
+				<td width = 1600px>
+				<div id="up_side" style="min-width:1600px;height:5px"></div>
+				</td>
+				<td width = 40px rowspan='5'>
+				<div id="right_side" style="min-width:30px;height:500px"></div>
+				</td>
+			</tr>
+			<tr>
+				<td align = 'center' width = 1600px height = 50 class = "pageuse">
+				<p id="time1" style="font-size: 40px">
+				Investment Portfolio Visualization
+				</td>
+
+			</tr>
+			<tr>
+				<td width = 1600px>
+					<table border = "0" width ="400px" class= "pageuse">
+						<tr>
+							<!-- 小表中第一行第一列，initial_name_weight-->
+							<td align="center" width=400px height=300px class="formuse">
+							<div id="container0" style="min-width:400px;height:300px"></div>
+							<script>
+								var chart0;
+								var fdata0 = [{"name":'type1',"y":0}, {"name":'type2',"y":0}, {"name":'type3',"y":0}, {"name":'type4',"y":0},{"name":'type5',"y":0},{"name":'type6',"y":0},{"name":'type7',"y":0},{"name":'type8',"y":0},{"name":'type9',"y":0},{"name":'type10',"y":0},{"name":'type11',"y":0},{"name":'type12',"y":0},{"name":'type13',"y":0}];
+								function requestData0(){
+								  $.getJSON('/static/json/Initial_name_weight.json', function (data) {
+									fdata0 = [{"name":'AUTOZONE INC',"y":data[0],"sliced": true,"selected": true}, {"name":'BALL CORP',"y":data[1]},{"name":'CHIPOTLE MEXICAN GRILL INC',"y":data[2]},
+									{"name":'COCA-COLA',"y":data[3]},
+									{"name":'ENTERPRISE PRODUCTS OPERATING LLC',"y":data[4]},
+									{"name":'EXXON MOBIL CORP',"y":data[5]},
+									{"name":'INTUITIVE SURGICAL INC',"y":data[6]},
+									{"name":'KELLOGG',"y":data[7]},
+									{"name":'LOWES COMPANIES INC',"y":data[8]},
+									{"name":'MARATHON PETROLEUM CORP',"y":data[9]},
+									{"name":'NEWMONT MINING CORP',"y":data[10]},
+									{"name":'PAYPAL HOLDINGS INC',"y":data[11]},
+									{"name":'UNITED CONTINENTAL HOLDINGS INC',"y":data[12]},
+									];
+									chart0.series[0].setData(fdata0);
+									setTimeout(requestData0, 10000);
+								  });
+						  }
+								
+								chart0 = Highcharts.chart('container0', {
+								chart: {
+									spacing : [40, 0 , 40, 0],
+								events:{
+									load: requestData0
+									}
+								},
+								title: {
+									floating:true,
+									text: 'The Initial Portfolio'
+								},
+							credits:{
+								enabled: false
+								},
+								tooltip: {
+									pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+								},
+								plotOptions: {
+									pie: {
+										allowPointSelect: true,
+										cursor: 'pointer',
+										dataLabels: {
+											enabled: true,
+											format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+											style: {
+												color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+											}
+										},
+										point: {
+											events: {
+												mouseOver: function(e) {  
+													chart.setTitle({
+														text: e.target.name+ '\t'+'$'+ e.target.y
+													});
+												}
+											}
+										},
+									}
+								},
+								series: [{
+									type: 'pie',
+									innerSize: '80%',
+									name: 'Proportion',
+									data: []
+								}]
+							}, function(c) { 
+								var centerY = c.series[0].center[1],
+									titleHeight = parseInt(c.title.styles.fontSize);
+								c.setTitle({
+									y:centerY + titleHeight/2
+								});
+							}); 
+							</script>
+								
+							</td>
+							
+							<!-- 小表中第一行第二列，environment_weight-->
+							<td align="center" width=400px height=300px class="formuse">
+							<div id="container1" style="min-width:400px;height:300px"></div>
+							<script>
+								var chart1;
+								var fdata1 = [{"name":'type1',"y":0}, {"name":'type2',"y":0}, {"name":'type3',"y":0}];
+								function requestData1(){
+								  $.getJSON('/static/json/environment_weight.json', function (data) {
+									fdata1 = [{"name":'Average',"y":data[0],"sliced": true,"selected": true}, {"name":'High',"y":data[1]},{"name":'Low',"y":data[2]}];
+									chart1.series[0].setData(fdata1);
+									setTimeout(requestData1, 10000);
+								  });
+						  }
+								
+								chart1 = Highcharts.chart('container1', {
+								chart: {
+									spacing : [40, 0 , 40, 0],
+								events:{
+									load: requestData1
+									}
+								},
+								title: {
+									floating:true,
+									text: 'Environment of Optimization'
+								},
+							credits:{
+								enabled: false
+								},
+								tooltip: {
+									pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+								},
+								plotOptions: {
+									pie: {
+										allowPointSelect: true,
+										cursor: 'pointer',
+										dataLabels: {
+											enabled: true,
+											format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+											style: {
+												color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+											}
+										},
+										
+									}
+								},
+								series: [{
+									type: 'pie',
+									innerSize: '80%',
+									name: '占比',
+									data: []
+								}]
+							}, function(c) { 
+								var centerY = c.series[0].center[1],
+									titleHeight = parseInt(c.title.styles.fontSize);
+								c.setTitle({
+									y:centerY + titleHeight/2
+								});
+							}); 
+							</script>
+							</td>
+							
+							<!-- 小表中第一行第三列，error-->
+							<td align="center" width=400px height=300px class="formuse">
+							<div id="container2" style="min-width:400px;height:300px"></div>
+							<script>
+								var chart2;           
+									chart2 = Highcharts.chart('container2', {
+									chart: {
+										type: 'bar',
+										
+									},
+									title: {
+										text: 'Tracking Error Comparation'
+									},
+									xAxis: {
+										categories:['Tracking error of initial portfolio','Tracking error of optimal portfolio']
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Tracking Error Rate'
+										}
+									},
+									legend: {
+										/* 图例显示顺序反转
+										 * 这是因为堆叠的顺序默认是反转的，可以设置 
+										 * yAxis.reversedStacks = false 来达到类似的效果 
+										 */
+										reversed: true 
+									},
+									plotOptions: {
+										series: {
+											stacking: 'normal'
+										}
+									},
+									series: [ {
+										name: 'Tracking error of initial portfolio',
+										data: [0.03596899,0]
+									},{
+										name: 'Tracking error of optimal portfolio',
+										data: [0,0.01910889]
+									}]
+								});
+
+							</script>
+							</td >
+							
+							<!-- 小表中第一行第四列，return-->
+							<td align="center" width=400px height=300px class="formuse">
+								<div id="container3" style="min-width:400px;height:300px"></div>
+								<script>
+									var chart3;           
+										chart3 = Highcharts.chart('container3', {
+										chart: {
+											type: 'bar',
+											
+										},
+										title: {
+											text: 'Expected Annual Return Comparation'
+										},
+										xAxis: {
+											categories:['Initial Portfolio','Optimal Portfolio']
+										  /*  minTickInterval: 24 * 60 * 60 * 1000,
+														dateTimeLabelFormats: {
+															day: '%Y-%m-%d<br/>%A'
+														}*/
+										},
+										yAxis: {
+											//min: 0,
+											title: {
+												text: 'Expected Annual Return Rate'
+											}
+										},
+										legend: {
+											/* 图例显示顺序反转
+											 * 这是因为堆叠的顺序默认是反转的，可以设置 
+											 * yAxis.reversedStacks = false 来达到类似的效果 
+											 */
+											reversed: false
+										},
+									   plotOptions: {
+											series: {
+												stacking: 'normal'
+											}
+										},
+										series: [ {
+											name: 'Annual Return',
+											data: [-0.0156377,0.0626219]
+										},{
+											name: 'Monthly Return',
+											data: [-0.0013031,0.0052185]
+										}]
+									});
+
+								</script>
+							</td>
+						</tr>
+						<tr>
+							<!-- 小表中第二行第一列，name_weight-->
+							<td align="center" width=400px height=300px class="formuse">
+							<div id="container4" style="min-width:400px;height:300px"></div>
+								<script>
+									var chart4;
+									var fdata4 = [{"name":'type1',"y":0}, {"name":'type2',"y":0}, {"name":'type3',"y":0}, {"name":'type4',"y":0},{"name":'type5',"y":0},{"name":'type6',"y":0},{"name":'type7',"y":0},{"name":'type8',"y":0},{"name":'type9',"y":0}];
+									function requestData4(){
+									  $.getJSON('/static/json/name_weight.json', function (data) {
+										fdata4 = [{"name":'JOHNSON CONTROLS INTERNATIONAL PLC',"y":data[0],"sliced": true,"selected": true}, {"name":'AUTOZONE INC',"y":data[1]},{"name":'BALL CORP',"y":data[2]},
+										{"name":'ENTERPRISE PRODUCTS OPERATING LLC',"y":data[3]},
+										{"name":'iShares Core S&P 500',"y":data[4]},
+										{"name":'iShares iBoxx $ High Yield Corporate Bond ETF',"y":data[5]},
+										{"name":'LOWS COMPANIES INC',"y":data[6]},
+										{"name":'PAYPAL HOLDINGS INC',"y":data[7]},
+										{"name":'UNITED CONTINENTAL HOLDINGS INC',"y":data[8]},
+										];
+										chart4.series[0].setData(fdata4);
+										setTimeout(requestData4, 10000);
+									  });
+							  }
+									
+									chart4 = Highcharts.chart('container4', {
+									chart: {
+										spacing : [40, 0 , 40, 0],
+									events:{
+										load: requestData4
+										}
+									},
+									title: {
+										floating:true,
+										text: 'The Optimization Portfolio'
+									},
+								credits:{
+									enabled: false
+									},
+									tooltip: {
+										pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+									},
+									plotOptions: {
+										pie: {
+											allowPointSelect: true,
+											cursor: 'pointer',
+											dataLabels: {
+												enabled: true,
+												format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+												style: {
+													color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+												}
+											},
+											point: {
+												events: {
+													mouseOver: function(e) {  
+														chart4.setTitle({
+															text: e.target.name+ '\t'+'$'+ e.target.y
+														});
+													}
+												}
+											},
+										}
+									},
+									series: [{
+										type: 'pie',
+										innerSize: '80%',
+										name: 'Proportion',
+										data: []
+									}]
+								}, function(c) { 
+									var centerY = c.series[0].center[1],
+										titleHeight = parseInt(c.title.styles.fontSize);
+									c.setTitle({
+										y:centerY + titleHeight/2
+									});
+								}); 
+								</script>
+							</td>
+							
+							<!-- 小表中第二行第二列，name_weight-->
+							<td align="center" width=400px height=300px class="formuse">
+							<div id="container5" style="min-width:400px;height:300px"></div>
+							<script>
+								var chart5;
+								var fdata5 = [{"name":'type1',"y":0}, {"name":'type2',"y":0}, {"name":'type3',"y":0},{"name":'type4',"y":0}, {"name":'type5',"y":0}, {"name":'type6',"y":0}];
+								function requestData5(){
+								  $.getJSON('/static/json/sector_weight.json', function (data) {
+									fdata5 = [{"name":'Consumer Discretionary',"y":data[0],"sliced": true,"selected": true},
+									{"name":'Diversified ',"y":data[1]},
+									{"name":'Energy',"y":data[2]},
+									{"name":'Industrials',"y":data[3]},
+									{"name":'Information Technology',"y":data[4]},
+									{"name":'Materials',"y":data[5]}];
+									chart5.series[0].setData(fdata5);
+									setTimeout(requestData5, 10000);
+								  });
+						  }
+								
+								chart5 = Highcharts.chart('container5', {
+								chart: {
+									spacing : [40, 0 , 40, 0],
+								events:{
+									load: requestData5
+									}
+								},
+								title: {
+									floating:true,
+									text: 'The Optimization Portfolio'
+								},
+							credits:{
+								enabled: false
+								},
+								tooltip: {
+									pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+								},
+								plotOptions: {
+									pie: {
+										allowPointSelect: true,
+										cursor: 'pointer',
+										dataLabels: {
+											enabled: true,
+											format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+											style: {
+												color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+											}
+										},
+										point: {
+											events: {
+												mouseOver: function(e) {  
+													chart.setTitle({
+														text: e.target.name+ '\t'+'$'+ e.target.y
+													});
+												}
+											}
+										},
+									}
+								},
+								series: [{
+									type: 'pie',
+									innerSize: '80%',
+									name: 'Proportion',
+									data: []
+								}]
+							}, function(c) { 
+								var centerY = c.series[0].center[1],
+									titleHeight = parseInt(c.title.styles.fontSize);
+								c.setTitle({
+									y:centerY + titleHeight/2
+								});
+							}); 
+							</script>
+							</td>
+							
+							<!-- 小表中第二行第三四列，prediction-->
+							<td align="center" width=400px height=300px class="formuse" colspan = "2">
+							<div id="container6" style="max-width:800px;height:300px"></div>
+							<script>
+								var chart6;
+								function requestData6(){
+									$.getJSON('/static/json/optimization_prediction.json', function (data) {
+										//alert("bbbb");
+										  chart6.series[0].setData(data);    
+									  });
+									$.getJSON('/static/json/Initial_prediction.json', function (data) {
+										//alert("bbbb");
+										  chart6.series[1].setData(data);    
+									  });
+									setTimeout(requestData6, 10000);
+									}
+								
+								
+							$(document).ready(function() {	
+								chart6 = Highcharts.chart('container6', {
+									chart: {
+											  zoomType: 'x',
+											  events: {
+												load: requestData6
+												}
+											},	
+												
+							title: {
+									text: 'Average Expected Return Prediction'
+							},
+							subtitle: {
+										  text: document.ontouchstart === undefined ?
+										  'Mouse Drag to Zoom' : 'Gesture Operation to Zoom'
+									  },
+							xAxis: {
+										categories:['last close price', '1st month', '2nd month', '3rd month', '4th month', '5th month', '6th month', '7th month', '8th month', '9th month', '10th month', '11th month', '12th month', '13th month', '14th month', '15th month', '16th month', '17th month', '18th month', '19th month', '20th month', '21st month', '22nd month', '23rd month'],
+										  title: {
+											  text: 'Investment Period'
+										  },
+									  },		  
+							yAxis: {
+									title: {
+											text: 'Total Value'
+									}
+							},
+							legend: {
+									layout: 'vertical',
+									align: 'right',
+									verticalAlign: 'middle'
+							},
+							/*
+							plotOptions: {
+									series: {
+											label: {
+													connectorAllowed: false
+											},
+											pointStart: 2010
+									}
+							},*/
+							plotOptions: {
+								area: {
+									fillColor: {
+										linearGradient: {
+											x1: 0,
+											y1: 0,
+											x2: 0,
+											y2: 1
+										},
+										stops: [
+											[0, Highcharts.getOptions().colors[0]],
+											[1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+										]
+									},
+									marker: {
+										radius: 2
+									},
+									lineWidth: 1,
+									states: {
+										hover: {
+											lineWidth: 1
+										}
+									},
+									threshold: null
+								}
+							},
+							series: [{
+									name: 'Optimization Portfolio',
+									//data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+									data:[]
+							}, {
+									name: 'Initial Portfolio',
+									//data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+									data:[]
+							}],
+							responsive: {
+									rules: [{
+											condition: {
+													maxWidth: 500
+											},
+											chartOptions: {
+													legend: {
+															layout: 'horizontal',
+															align: 'center',
+															verticalAlign: 'bottom'
+													}
+											}
+									}]
+							}
+					});
+					});
+							</script>
+							</td>
+							
+						</tr>
+					</table>
+				</td>
+
+			</tr>
+			<tr>
+				<td align = 'center' width = 1600px height = 500 class = "pageuse">
+				<p id="time1" style="font-size: 35px">
+				Note: 
+				<br/>
+				The product is based on Highchart Cloud Service, some browsers may meet display problem because of Same Origin Policy
+				<br/>
+				<br/>
+				Features Explanation
+				<br/>
+				Visualization for no programming knowledge investors to do optimum portfolio.
+				<br/>
+				The upper left pie chart is your initial investment, other three pie charts are optimization portfolio we recommand.
+				<br/>
+				You could see the return and tracking error comparation from  right side.
+				<br/>
+				Tips: This is a product compatible for PC, ipad, phone. Each chart has unique dynamic function, you could download charts by the button.
+				</td>
+
+			</tr>
+			<tr>
+				<td width = 1800px>
+				<div id="down_side" style="min-width:1600px;height:30px"></div>
+				</td>
+			</tr>
+				
+    </body>
+</html>
