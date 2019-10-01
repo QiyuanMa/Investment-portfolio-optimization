@@ -1,0 +1,41 @@
+Ticker,Name,CUSIP,Sector,Geography,Asset Class,Last Close Price,One Month Return,Risk Score,Controversy,Environmental,Governance,Social,Sustainability,Has Tobacco,Has Alcohol,Has Gambling,Has Military,Has Fossil Fuels,Benchmark - Conservative,Benchmark - Moderate,Benchmark - Aggressive
+CX_IE00BY7QL619_NYQ,JOHNSON CONTROLS INTERNATIONAL PLC,00BY7QL61,Industrials,Domestic,Equity,44,0.007803465,5,Average,Average,Low,High,Low,0,0,0,0,0,0,0,0
+CX_US02079KAA51_USD,ALPHABET INC,02079KAA5,Information Technology,Domestic,Corporate Bonds,105.39,-0.000429374,3,Low,Average,Average,Low,Average,0,0,0,0,0,0,0,0
+CX_US031162BG42_USD,AMGEN INC,031162BG4,Health Care,Domestic,Corporate Bonds,106.49,0.000237313,4,Average,Low,Low,High,Low,0,0,0,0,0,0,0,0
+CX_US031162BK53_USD,Amgen 5.15% 11/15/2041,031162BK5,Health Care,Domestic,Corporate Bonds,116.05,0.004568838,3,High,Average,Low,High,Average,0,0,0,0,0,0,0,0
+CX_US03232PAD06_USD,AmSurg Corp 5.625% 07/15/2022,03232PAD0,Health Care,Domestic,Corporate Bonds,104,0.000593836,3,Average,High,Low,Average,Average,0,0,0,0,0,0,0,0
+CX_US0533321024_NYQ,AUTOZONE INC,53332102,Consumer Discretionary,Domestic,Equity,495.69,-0.012555638,7,Average,High,Low,Low,Average,0,0,0,0,0,0,0,0
+CX_US0584981064_NYQ,BALL CORP,58498106,Materials,Domestic,Equity,42.42,-0.011617474,5,Average,Average,Average,High,Average,0,0,0,0,0,0,0,0
+CX_US1696561059_NYQ,CHIPOTLE MEXICAN GRILL INC,169656105,Consumer Discretionary,Domestic,Equity,374.98,-0.023754004,4,Average,High,Low,Average,Low,0,0,0,0,0,0,0,0
+CX_US1912161007_NYQ,COCA-COLA,191216100,Consumer Staples,Domestic,Equity,44.67,0.00360322,5,Average,Average,Average,Average,Low,0,0,0,0,0,0,0,0
+CX_US29379VAY92_USD,ENTERPRISE PRODUCTS OPERATING LLC,29379VAY9,Energy,Domestic,Corporate Bonds,99.53,0.005615788,2,High,Low,High,High,Low,0,0,0,0,0,0,0,0
+CX_US30231GAN25_USD,EXXON MOBIL CORP,30231GAN2,Energy,Domestic,Corporate Bonds,96.35,0.001544119,3,Low,Low,High,High,Low,0,0,0,0,1,0,0,0
+CX_US46120E6023_NSQ,INTUITIVE SURGICAL INC,46120E602,Health Care,Domestic,Equity,946.65,0.026059887,6,Average,Average,Low,Average,Average,0,0,0,0,0,0,0,0
+CX_US4642851053_NYQ,iShares Gold Trust,464285105,Commodity,Domestic,Commodities,11.95,0.006473624,5,Low,Average,Low,High,Low,0,0,0,0,0,0,0,0
+CX_US4642871762_NYQ,iShares TIPS Bond,464287176,Government,Domestic,Government Bonds,113.6,0.000445999,2,Low,High,Low,Average,High,0,0,0,0,0,176.056338,0,0
+CX_US4642872000_NYQ,iShares Core S&P 500,464287200,Diversified,Domestic,Equity,247.36,0.007253472,5,High,High,Average,Average,High,1,0,0,0,0,0,101.0672704,121.2807245
+CX_US4642872422_NYQ,iShares iBoxx $ Investment Grade Corporate Bond,464287242,Diversified,Domestic,Corporate Bonds,121.2,0.001847085,3,High,Low,Average,High,High,1,0,0,0,0,0,165.0165017,0
+CX_US4642874329_NYQ,iShares 20+ Year Treasury Bond,464287432,Government,Domestic,Government Bonds,124.75,0.000871909,1,Low,Low,High,Low,Low,0,0,0,0,0,0,0,0
+CX_US4642874402_NYQ,iShares Core S&P Mid-Cap ETF,464287440,Diversified,Domestic,Equity,106.92,0.000229436,6,Low,High,High,High,Average,1,0,0,0,0,0,233.8196783,0
+CX_US4642874576_NYQ,iShares 1-3 Year Treasury Bond,464287457,Government,Domestic,Government Bonds,84.54,-0.000149624,1,Low,High,High,High,Low,0,0,0,0,0,0,0,0
+CX_US4642874659_NYQ,iShares MSCI EAFE,464287465,Diversified,Domestic,Equity,66.25,0.001752858,7,Low,Low,Average,High,Low,1,1,1,1,1,0,0,0
+CX_US4642875078_NYQ,iShares Core S&P Mid-Cap,464287507,Diversified,Domestic,Equity,175.68,0.007512538,6,Low,Average,High,Average,Low,1,1,1,1,1,0,0,0
+CX_US4642875987_NYQ,iShares Russell 1000 Value,464287598,Diversified,Domestic,Equity,116.25,0.005951127,7,Average,Average,Low,High,Low,1,1,1,1,1,0,0,0
+CX_US4642876142_NYQ,iShares Russell 1000 Growth ETF,464287614,Diversified,Domestic,Equity,121.7,0.008087738,7,Low,Average,Average,Low,Average,1,1,1,1,1,0,82.16926869,164.3385374
+CX_US4642878049_NYQ,iShares Core S&P Small-Cap ETF,464287804,Diversified,Domestic,Equity,70.69,-0.01126747,8,Average,Low,Low,High,Low,1,1,1,1,1,0,0,282.9254491
+CX_US4642882819_NYQ,Shares J.P. Morgan USD Emerging Markets Bond,464288281,Diversified,Domestic,Corporate Bonds,114.85,0.002460126,8,High,Average,Low,High,Average,1,1,1,1,1,0,0,0
+CX_US4642884146_NYQ,iShares National Muni Bond ETF,464288414,Municipal,Domestic,Municipal,110.57,0.00061834,2,Average,High,Low,Average,Average,0,0,0,0,0,180.8808899,0,0
+CX_US4642885135_NYQ,iShares iBoxx $ High Yield Corporate Bond ETF,464288513,Diversified,Domestic,Corporate Bonds,88.6,0.000762512,4,Average,High,Low,Low,Average,0,0,0,0,0,0,112.8668172,225.7336343
+CX_US4642885887_NYQ,iShares MBS ETF ,464288588,Real Estate,Domestic,Mortgages,106.99,-0.00092442,3,Average,Average,Average,High,Average,0,0,0,0,0,186.9333583,0,0
+CX_US4642886463_NYQ,iShares 1-3 Year Credit Bond,464288646,Diversified,Domestic,Corporate Bonds,105.4,0.000137535,4,Average,High,Low,Average,Low,0,0,0,0,1,0,94.87666034,0
+CX_US4642886612_NYQ,iShares 3-7 Year Treasury Bond,464288661,Government,Domestic,Government Bonds,123.9,0.000119462,1,Low,Average,Average,Average,Low,0,0,0,0,0,161.4205004,0,0
+CX_US4642886877_NYQ,iShares U.S. Preferred Stock ETF,464288687,Diversified,Domestic,Equity,39.13,-0.000331455,5,High,Low,High,High,Average,1,1,1,1,1,511.1167902,0,0
+CX_US46434G1031_NYQ,iShares Core MSCI Emerging Markets,46434G103,Diversified,Domestic,Equity,52.23,0.00803635,7,Low,High,High,High,Low,0,0,0,0,0,0,0,191.4608463
+CX_US4878361082_NYQ,KELLOGG,487836108,Consumer Staples,Domestic,Equity,66.26,0.000874965,6,Average,Average,Low,Average,Average,0,0,0,0,0,0,0,0
+CX_US5486611073_NYQ,LOWES COMPANIES INC,548661107,Consumer Discretionary,Domestic,Equity,75.96,0.005498958,5,Low,Average,Low,High,Low,0,0,0,0,0,0,0,0
+CX_US56585AAG76_USD,MARATHON PETROLEUM CORP,56585AAG7,Energy,Domestic,Corporate Bonds,101.27,0.001843992,6,Average,Low,Low,Average,Low,0,0,0,0,1,0,0,0
+CX_US651639AN69_USD,NEWMONT MINING CORP,651639AN6,Industrials,Domestic,Corporate Bonds,103.87,0.005755554,6,High,Low,Average,Average,Low,0,0,0,0,1,0,0,0
+CX_US70450Y1038_NSQ,PAYPAL HOLDINGS INC,70450Y103,Information Technology,Domestic,Equity,58.96,0.019552159,5,High,Low,Average,High,Low,0,0,0,0,0,0,0,0
+CX_US9100471096_NYQ,UNITED CONTINENTAL HOLDINGS INC,910047109,Industrials,Domestic,Equity,78.9,0.017505497,6,Average,Low,High,Low,Low,0,0,0,0,0,0,0,0
+CX_US912810EJ35_USD,US Treasury 05/15/2021,912810EJ3,Government,Domestic,Government Bonds,123.84,-0.003679098,1,Low,High,High,High,Average,0,0,0,0,0,0,0,0
+CX_US912810PX00_USD,TREASURY BOND,912810PX0,Government,Domestic,Government Bonds,129.45,7.49152E-06,1,Low,High,High,High,Low,0,0,0,0,0,0,0,0
