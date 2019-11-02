@@ -35,7 +35,7 @@ The Weight Distribution of the Portfolio of The Largest Sharp Rate
 # Visualization Cloud Computing Product
 Using html, javascript, css to develop the product and use web visualization tool Highcharts(Most of the big companies in the world use this to achieve data visualization, including IBM). 
 
-You could use the URL below to see or click edit of “click_me_run.html”.
+You could use the URL below to see.
 
 https://qiyuanma.github.io/Investment-portfolio-optimization/
 
