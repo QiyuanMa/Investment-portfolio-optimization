@@ -14,6 +14,7 @@ The investment portfolio optimization is based on Markowits Algorithm, using IBM
 Using Sequential Least Squares Programming Algorithm(SLSP) for optimization.
 
 # optimum_universe Results
+
 ![Alt text](results/1.png)
 
 # 5 Real stocks optimization portfolio from SHE stock market and visualization
@@ -29,10 +30,13 @@ Using Sequential Least Squares Programming Algorithm(SLSP) for optimization.
 ![Alt text](results/4.png)
 
 Ppresen/Pinitial, standardized with 100 histogram of yield distribution
+
 ![Alt text](results/5.png)
+
 Return, Volatility and Sharp Rate Scatter Plots of 5000 Portfolios 
 Effective Boundary and Red Star is the Sharpe Maximum Portfolio
 The Weight Distribution of the Portfolio of The Largest Sharp Rate
+
 ![Alt text](results/6.png)
 
 # Visualization Cloud Computing Product
