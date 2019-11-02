@@ -37,7 +37,7 @@ Using html, javascript, css to develop the product and use web visualization too
 
 You could use the URL below to see or click edit of “click_me_run.html”.
 
-https://qiyuanma.github.io/Investment-portfolio-optimization/visualization/
+https://qiyuanma.github.io/Investment-portfolio-optimization/
 
 All the charts are dynamic, It is compatible excellent in PC/Phone/Pad
 
