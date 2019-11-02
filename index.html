@@ -28,637 +28,561 @@
 		</style>
     </head>
     <body>
-    <table border="0" width="1880" class="pageuse">
-	    <tr>
-		    <td colspan="6" height="20">
-		    </td>
-	    </tr>
-	    
-	    <tr >
-	    <td width=30px>
-		</td>
-	    <td align="center" width="210">
-    		<img src="./logo.jpg" width="200" height="100"/>
-    	</td>
-		<td width="730" align="center" colspan="2">
-			<p id="time1" style="font-size: 22px"></p>
-			<script>
-				function mytime(){
-					var a = new Date();
-					var b = a.toLocaleTimeString();
-					var c = a.toLocaleDateString();
-					document.getElementById("time1").innerHTML = "<b>"+c+"</br>"+b+"</b>";
-					}
-					setInterval(function() {mytime()},1000);
-			</script>
-		</td>
-		<td width=160px>
-		</td>
-		<td width=20px>
-		</td>
-	    </tr>
+		<table border = "0" width="1680" class="pageuse">
+			<tr>
+				<td width = 40px  rowspan='5'>
+				<div id="left_side" style="min-width:30px;height:500px"></div>
+				</td>
+				<td width = 1600px>
+				<div id="up_side" style="min-width:1600px;height:5px"></div>
+				</td>
+				<td width = 40px rowspan='5'>
+				<div id="right_side" style="min-width:30px;height:500px"></div>
+				</td>
+			</tr>
+			<tr>
+				<td align = 'center' width = 1600px height = 50 class = "pageuse">
+				<p id="time1" style="font-size: 40px">
+				Investment Portfolio Visualization
+				</td>
 
-	    <tr>
-		    <td width=20px>
-		    </td>
-		    <td colspan="2">
-		    <table border="0" id="table">
-				<tr>
-				    <td id="One_Day_Total" height=150px width=268px align="center" class="formuse" colspan="2">
-				    </td>
-				    <td id="One_Day_NoE" height=150px width=268px align="center" class="formuse" colspan="2">
-				    </td>
-				    <td rowspan="2" width=400px height=300px class="formuse">
-				    <div id="container0" style="min-width:400px;height:300px"></div>
-			        <script>
-						var chart0;
-						var fdata = [{"name":'type1',"y":0}, {"name":'type2',"y":0}, {"name":'type3',"y":0}];
-						function requestData0(){
-			              $.getJSON('./day_1.json', function (data) {
-			                fdata = [{"name":'state<6',"y":data[0],"sliced": true,"selected": true}, {"name":'state=6',"y":data[1]},{"name":'state>6',"y":data[2]}];
-			                chart0.series[0].setData(fdata);
-			                setTimeout(requestData, 10000);
-			              });
-			      		}
-			            chart0 = Highcharts.chart('container0', {
-						chart: {
-							spacing : [40, 0 , 40, 0],
-						events:{
-							load: requestData0
-							}
-						},
-						title: {
-							floating:true,
-							text: '当日病例数'
-						},
-					credits:{
-						enabled: false
-						},
-						tooltip: {
-							pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-						},
-						plotOptions: {
-							pie: {
-								allowPointSelect: true,
-								cursor: 'pointer',
-								dataLabels: {
-									enabled: true,
-									format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-									style: {
-										color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+			</tr>
+			<tr>
+				<td width = 1600px>
+					<table border = "0" width ="400px" class= "pageuse">
+						<tr>
+							<!-- 小表中第一行第一列，initial_name_weight-->
+							<td align="center" width=400px height=300px class="formuse">
+							<div id="container0" style="min-width:400px;height:300px"></div>
+							<script>
+								var chart0;
+								var fdata0 = [{"name":'type1',"y":0}, {"name":'type2',"y":0}, {"name":'type3',"y":0}, {"name":'type4',"y":0},{"name":'type5',"y":0},{"name":'type6',"y":0},{"name":'type7',"y":0},{"name":'type8',"y":0},{"name":'type9',"y":0},{"name":'type10',"y":0},{"name":'type11',"y":0},{"name":'type12',"y":0},{"name":'type13',"y":0}];
+								function requestData0(){
+								  $.getJSON('./json/Initial_name_weight.json', function (data) {
+									fdata0 = [{"name":'AUTOZONE INC',"y":data[0],"sliced": true,"selected": true}, {"name":'BALL CORP',"y":data[1]},{"name":'CHIPOTLE MEXICAN GRILL INC',"y":data[2]},
+									{"name":'COCA-COLA',"y":data[3]},
+									{"name":'ENTERPRISE PRODUCTS OPERATING LLC',"y":data[4]},
+									{"name":'EXXON MOBIL CORP',"y":data[5]},
+									{"name":'INTUITIVE SURGICAL INC',"y":data[6]},
+									{"name":'KELLOGG',"y":data[7]},
+									{"name":'LOWES COMPANIES INC',"y":data[8]},
+									{"name":'MARATHON PETROLEUM CORP',"y":data[9]},
+									{"name":'NEWMONT MINING CORP',"y":data[10]},
+									{"name":'PAYPAL HOLDINGS INC',"y":data[11]},
+									{"name":'UNITED CONTINENTAL HOLDINGS INC',"y":data[12]},
+									];
+									chart0.series[0].setData(fdata0);
+									setTimeout(requestData0, 10000);
+								  });
+						  }
+								
+								chart0 = Highcharts.chart('container0', {
+								chart: {
+									spacing : [40, 0 , 40, 0],
+								events:{
+									load: requestData0
 									}
 								},
-								point: {
-									events: {
-										mouseOver: function(e) {  
-											chart.setTitle({
-												text: e.target.name+ '\t'+ e.target.y + '人'
-											});
-										}
+								title: {
+									floating:true,
+									text: 'The Initial Portfolio'
+								},
+							credits:{
+								enabled: false
+								},
+								tooltip: {
+									pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+								},
+								plotOptions: {
+									pie: {
+										allowPointSelect: true,
+										cursor: 'pointer',
+										dataLabels: {
+											enabled: true,
+											format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+											style: {
+												color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+											}
+										},
+										point: {
+											events: {
+												mouseOver: function(e) {  
+													chart.setTitle({
+														text: e.target.name+ '\t'+'$'+ e.target.y
+													});
+												}
+											}
+										},
 									}
 								},
-							}
-						},
-						series: [{
-							type: 'pie',
-							innerSize: '80%',
-							name: '占比',
-							data: []
-						}]
-					}, function(c) { 
-						var centerY = c.series[0].center[1],
-							titleHeight = parseInt(c.title.styles.fontSize);
-						c.setTitle({
-							y:centerY + titleHeight/2
-						});
-					}); 
-			        </script>
-				    </td>
-				</tr>
-				<tr>
-				    <td id="One_Day_HaveE" height=150px width=268px align="center" class="formuse" colspan="2">
-				    </td>
-				    <td id="One_Day_False" height=150px width=268px align="center" class="formuse"  colspan="2">
-				    </td>
-				</tr>
-				</table>
-				<script>  
-					window.onload=function(){
-						var dataday=[0,0,0];
-						$.getJSON("./day_1.json", function(jsontemp){
-							dataday[0]=jsontemp[0];
-							dataday[1]=jsontemp[1];
-							dataday[2]=jsontemp[2];
+								series: [{
+									type: 'pie',
+									innerSize: '80%',
+									name: 'Proportion',
+									data: []
+								}]
+							}, function(c) { 
+								var centerY = c.series[0].center[1],
+									titleHeight = parseInt(c.title.styles.fontSize);
+								c.setTitle({
+									y:centerY + titleHeight/2
+								});
+							}); 
+							</script>
+								
+							</td>
 							
-							var table=document.getElementById("table");  
-							var One_Day_Total=document.getElementById("One_Day_Total");
-							var datatotal=dataday[0]+dataday[1]+dataday[2];
-							One_Day_Total.innerHTML="<p style='font-size: 18px'>今日病例数："+datatotal+"</p>";
-							var One_Day_NoE=document.getElementById("One_Day_NoE");
-							One_Day_NoE.innerHTML="<p style='font-size: 18px'>今日未诊断："+dataday[2]+"</p>";
-							var One_Day_HaveE=document.getElementById("One_Day_HaveE");
-							One_Day_HaveE.innerHTML="<p style='font-size: 18px'>今日已诊断："+dataday[1]+"</p>";
-							var One_Day_False=document.getElementById("One_Day_False");
-							One_Day_False.innerHTML="<p style='font-size: 18px'>无效数据："+dataday[0]+"</p>";
-							});
-						}  
-				</script>
-		    </td>
-		    <td colspan="2">
-		    <table border="0" align="right">
-			    <tr>
-				    <td align="center" width=420px height=305px class="formuse">
-    				<div id="container1" style="min-width:420px;height:305px"></div>
-			        <script>
-			            var chart1;
-			            function requestData1(){
-			              $.getJSON('./day_3_state_5.json', function (data) {
-			                  for (var i = 0; i < data.length; i++){
-			                      var date = new Date(data[i][0]);
-			                      var year = date.getUTCFullYear();
-			                      var month = date.getUTCMonth();
-			                      var day = date.getUTCDate();
-			                      data[i][0] = Date.UTC(year, month, day + 1);
-			                  }      
-			                  chart1.series[0].setData(data);    
-			              });
-			              $.getJSON('./day_3_state_6.json', function (data) {
-			                  for (var i = 0; i < data.length; i++){
-			                      var date = new Date(data[i][0]);
-			                      var year = date.getUTCFullYear();
-			                      var month = date.getUTCMonth();
-			                      var day = date.getUTCDate();
-			                      data[i][0] = Date.UTC(year, month, day + 1);
-			                  }      
-			                  chart1.series[1].setData(data);    
-			              });
-			              $.getJSON('./day_3_state_7.json', function (data) {
-			                  for (var i = 0; i < data.length; i++){
-			                      var date = new Date(data[i][0]);
-			                      var year = date.getUTCFullYear();
-			                      var month = date.getUTCMonth();
-			                      var day = date.getUTCDate();
-			                      data[i][0] = Date.UTC(year, month, day + 1);
-			                  }      
-			                  chart1.series[2].setData(data);    
-			              });
-			              setTimeout(requestData1, 10000);
-			            }
-			
-			            $(document).ready(function() {
-			            
-			                chart1 = Highcharts.chart('container1', {
-			                chart: {
-			                    type: 'bar',
-			                    events:{
-			                        load: requestData1
-			                    }
-			                },
-			                title: {
-			                    text: '三天统计图'
-			                },
-			                xAxis: {
-			                	type:'datetime',
-			                    minTickInterval: 24 * 60 * 60 * 1000,
-			                                dateTimeLabelFormats: {
-			                                    day: '%Y-%m-%d<br/>%A'
-			                                }
-			                },
-			                yAxis: {
-			                    min: 0,
-			                    title: {
-			                        text: 'number'
-			                    }
-			                },
-			                legend: {
-			                    /* 图例显示顺序反转
-			                     * 这是因为堆叠的顺序默认是反转的，可以设置 
-			                     * yAxis.reversedStacks = false 来达到类似的效果 
-			                     */
-			                    reversed: true 
-			                },
-			                plotOptions: {
-			                    series: {
-			                        stacking: 'normal'
-			                    }
-			                },
-			                series: [{
-			                    name: '状态1',
-			                    data: []
-			                }, {
-			                    name: '状态2',
-			                    data: []
-			                }, {
-			                    name: '状态3',
-			                    data: []
-			                }]
-			            });
-			        });
-			        </script>
-    				</td>
-				    <td align="center" width=420px height=305px class="formuse">
-				    <div id="container2" style="min-width:420px;height:300px" ></div>
-			        <script>
-			              var chart2;
-			              var fdata = [{"name":'type1',"y":0}, {"name":'type2',"y":0}];
-			
-			            function requestData2(){
-			                    $.getJSON('./total.json', function (data) {
-			                      fdata = [{"name":'Others',"y":data[0],"sliced": true,"selected": true}, {"name":'Jinke',"y":data[1]}];
-			                      chart2.series[0].setData(fdata);
-			                      setTimeout(requestData2, 10000);
-			                    });
-			            }
-			
-			
-			                  chart2 = Highcharts.chart('container2', {
-			            chart: {
-			              spacing : [40, 0 , 40, 0],
-			              events: {
-			                  load: requestData2
-			              }
-			            },
-			            exporting: {
-			                 enabled: false
-			            },
-			            title: {
-			              floating:true,
-			              text: '病例比例'
-			            },
-			            credits: {
-			                  enabled: false
-			            },
-			            tooltip: {
-			              pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-			            },
-			            plotOptions: {
-			              pie: {
-			                allowPointSelect: true,
-			                cursor: 'pointer',
-			                dataLabels: {
-			                  enabled: true,
-			                  format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-			                  style: {
-			                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-			                  }
-			                },
-			                point: {
-			                  events: {
-			                    mouseOver: function(e) {
-			                      chart.setTitle({
-			                        text: e.target.name+ '\t'+ e.target.y + ' 人'
-			                      });
-			                    }
-			                  }
-			                },
-			              }
-			            },
-			            series: [{
-			              type: 'pie',
-			              innerSize: '80%',
-			              name: '市场份额',
-			              data: []
-			            }]
-			          }, function(c) {
-			            // 环形图圆心
-			            var centerY = c.series[0].center[1],
-			              titleHeight = parseInt(c.title.styles.fontSize);
-			            // 动态设置标题位置
-			            c.setTitle({
-			              y:centerY + titleHeight/2
-			            });
-			          });
-			        </script>
-				    </td>
-			    </tr>
-		    </table>
-		    </td>
-		    <td width=20px>
-		    </td>
-	    </tr>
-	    <tr>
-	    <td colspan="6" height=20px>
-	    </td>
-	    </tr>
+							<!-- 小表中第一行第二列，environment_weight-->
+							<td align="center" width=400px height=300px class="formuse">
+							<div id="container1" style="min-width:400px;height:300px"></div>
+							<script>
+								var chart1;
+								var fdata1 = [{"name":'type1',"y":0}, {"name":'type2',"y":0}, {"name":'type3',"y":0}];
+								function requestData1(){
+								  $.getJSON('./json/environment_weight.json', function (data) {
+									fdata1 = [{"name":'Average',"y":data[0],"sliced": true,"selected": true}, {"name":'High',"y":data[1]},{"name":'Low',"y":data[2]}];
+									chart1.series[0].setData(fdata1);
+									setTimeout(requestData1, 10000);
+								  });
+						  }
+								
+								chart1 = Highcharts.chart('container1', {
+								chart: {
+									spacing : [40, 0 , 40, 0],
+								events:{
+									load: requestData1
+									}
+								},
+								title: {
+									floating:true,
+									text: 'Environment of Optimization'
+								},
+							credits:{
+								enabled: false
+								},
+								tooltip: {
+									pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+								},
+								plotOptions: {
+									pie: {
+										allowPointSelect: true,
+										cursor: 'pointer',
+										dataLabels: {
+											enabled: true,
+											format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+											style: {
+												color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+											}
+										},
+										
+									}
+								},
+								series: [{
+									type: 'pie',
+									innerSize: '80%',
+									name: '占比',
+									data: []
+								}]
+							}, function(c) { 
+								var centerY = c.series[0].center[1],
+									titleHeight = parseInt(c.title.styles.fontSize);
+								c.setTitle({
+									y:centerY + titleHeight/2
+								});
+							}); 
+							</script>
+							</td>
+							
+							<!-- 小表中第一行第三列，error-->
+							<td align="center" width=400px height=300px class="formuse">
+							<div id="container2" style="min-width:400px;height:300px"></div>
+							<script>
+								var chart2;           
+									chart2 = Highcharts.chart('container2', {
+									chart: {
+										type: 'bar',
+										
+									},
+									title: {
+										text: 'Tracking Error Comparation'
+									},
+									xAxis: {
+										categories:['Tracking error of initial portfolio','Tracking error of optimal portfolio']
+									},
+									yAxis: {
+										min: 0,
+										title: {
+											text: 'Tracking Error Rate'
+										}
+									},
+									legend: {
+										/* 图例显示顺序反转
+										 * 这是因为堆叠的顺序默认是反转的，可以设置 
+										 * yAxis.reversedStacks = false 来达到类似的效果 
+										 */
+										reversed: true 
+									},
+									plotOptions: {
+										series: {
+											stacking: 'normal'
+										}
+									},
+									series: [ {
+										name: 'Tracking error of initial portfolio',
+										data: [0.03596899,0]
+									},{
+										name: 'Tracking error of optimal portfolio',
+										data: [0,0.01910889]
+									}]
+								});
 
-	    <tr>
-		    <td width=20px>
-		    </td>
-		    <td colspan="4">
-		    <table align="center" border="0" width=1820px >
-			    <tr>
-				    <td align="left" width=940px class="formuse">
-				    <div id="container3" style="min-width:940px;height:400px" ></div>
-			        <script>
-			            var chart3;
+							</script>
+							</td >
+							
+							<!-- 小表中第一行第四列，return-->
+							<td align="center" width=400px height=300px class="formuse">
+								<div id="container3" style="min-width:400px;height:300px"></div>
+								<script>
+									var chart3;           
+										chart3 = Highcharts.chart('container3', {
+										chart: {
+											type: 'bar',
+											
+										},
+										title: {
+											text: 'Expected Annual Return Comparation'
+										},
+										xAxis: {
+											categories:['Initial Portfolio','Optimal Portfolio']
+										  /*  minTickInterval: 24 * 60 * 60 * 1000,
+														dateTimeLabelFormats: {
+															day: '%Y-%m-%d<br/>%A'
+														}*/
+										},
+										yAxis: {
+											//min: 0,
+											title: {
+												text: 'Expected Annual Return Rate'
+											}
+										},
+										legend: {
+											/* 图例显示顺序反转
+											 * 这是因为堆叠的顺序默认是反转的，可以设置 
+											 * yAxis.reversedStacks = false 来达到类似的效果 
+											 */
+											reversed: false
+										},
+									   plotOptions: {
+											series: {
+												stacking: 'normal'
+											}
+										},
+										series: [ {
+											name: 'Annual Return',
+											data: [-0.0156377,0.0626219]
+										},{
+											name: 'Monthly Return',
+											data: [-0.0013031,0.0052185]
+										}]
+									});
 
-			            function requestData3(){
-			              $.getJSON('./day_120_state_5.json', function (data) {
-			                  for (var i = 0; i < data.length; i++){
-			                      var date = new Date(data[i][0]);
-			                      var year = date.getUTCFullYear();
-			                      var month = date.getUTCMonth();
-			                      var day = date.getUTCDate();
-			                      data[i][0] = Date.UTC(year, month, day + 1);
-			                  }
-			                  chart3.series[0].setData(data);
-			              });
-			              $.getJSON('./day_120_state_6.json', function (data) {
-			                  for (var i = 0; i < data.length; i++){
-			                      var date = new Date(data[i][0]);
-			                      var year = date.getUTCFullYear();
-			                      var month = date.getUTCMonth();
-			                      var day = date.getUTCDate();
-			                      data[i][0] = Date.UTC(year, month, day + 1);
-			                  }
-			                  chart3.series[1].setData(data);
-			              });
-			              $.getJSON('./day_120_state_7.json', function (data) {
-			                  for (var i = 0; i < data.length; i++){
-			                      var date = new Date(data[i][0]);
-			                      var year = date.getUTCFullYear();
-			                      var month = date.getUTCMonth();
-			                      var day = date.getUTCDate();
-			                      data[i][0] = Date.UTC(year, month, day + 1);
-			                  }
-			                  chart3.series[2].setData(data);
-			              });
-			              setTimeout(requestData3, 10000);
-			            }
+								</script>
+							</td>
+						</tr>
+						<tr>
+							<!-- 小表中第二行第一列，name_weight-->
+							<td align="center" width=400px height=300px class="formuse">
+							<div id="container4" style="min-width:400px;height:300px"></div>
+								<script>
+									var chart4;
+									var fdata4 = [{"name":'type1',"y":0}, {"name":'type2',"y":0}, {"name":'type3',"y":0}, {"name":'type4',"y":0},{"name":'type5',"y":0},{"name":'type6',"y":0},{"name":'type7',"y":0},{"name":'type8',"y":0},{"name":'type9',"y":0}];
+									function requestData4(){
+									  $.getJSON('./json/name_weight.json', function (data) {
+										fdata4 = [{"name":'JOHNSON CONTROLS INTERNATIONAL PLC',"y":data[0],"sliced": true,"selected": true}, {"name":'AUTOZONE INC',"y":data[1]},{"name":'BALL CORP',"y":data[2]},
+										{"name":'ENTERPRISE PRODUCTS OPERATING LLC',"y":data[3]},
+										{"name":'iShares Core S&P 500',"y":data[4]},
+										{"name":'iShares iBoxx $ High Yield Corporate Bond ETF',"y":data[5]},
+										{"name":'LOWS COMPANIES INC',"y":data[6]},
+										{"name":'PAYPAL HOLDINGS INC',"y":data[7]},
+										{"name":'UNITED CONTINENTAL HOLDINGS INC',"y":data[8]},
+										];
+										chart4.series[0].setData(fdata4);
+										setTimeout(requestData4, 10000);
+									  });
+							  }
+									
+									chart4 = Highcharts.chart('container4', {
+									chart: {
+										spacing : [40, 0 , 40, 0],
+									events:{
+										load: requestData4
+										}
+									},
+									title: {
+										floating:true,
+										text: 'The Optimization Portfolio'
+									},
+								credits:{
+									enabled: false
+									},
+									tooltip: {
+										pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+									},
+									plotOptions: {
+										pie: {
+											allowPointSelect: true,
+											cursor: 'pointer',
+											dataLabels: {
+												enabled: true,
+												format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+												style: {
+													color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+												}
+											},
+											point: {
+												events: {
+													mouseOver: function(e) {  
+														chart4.setTitle({
+															text: e.target.name+ '\t'+'$'+ e.target.y
+														});
+													}
+												}
+											},
+										}
+									},
+									series: [{
+										type: 'pie',
+										innerSize: '80%',
+										name: 'Proportion',
+										data: []
+									}]
+								}, function(c) { 
+									var centerY = c.series[0].center[1],
+										titleHeight = parseInt(c.title.styles.fontSize);
+									c.setTitle({
+										y:centerY + titleHeight/2
+									});
+								}); 
+								</script>
+							</td>
+							
+							<!-- 小表中第二行第二列，name_weight-->
+							<td align="center" width=400px height=300px class="formuse">
+							<div id="container5" style="min-width:400px;height:300px"></div>
+							<script>
+								var chart5;
+								var fdata5 = [{"name":'type1',"y":0}, {"name":'type2',"y":0}, {"name":'type3',"y":0},{"name":'type4',"y":0}, {"name":'type5',"y":0}, {"name":'type6',"y":0}];
+								function requestData5(){
+								  $.getJSON('./json/sector_weight.json', function (data) {
+									fdata5 = [{"name":'Consumer Discretionary',"y":data[0],"sliced": true,"selected": true},
+									{"name":'Diversified ',"y":data[1]},
+									{"name":'Energy',"y":data[2]},
+									{"name":'Industrials',"y":data[3]},
+									{"name":'Information Technology',"y":data[4]},
+									{"name":'Materials',"y":data[5]}];
+									chart5.series[0].setData(fdata5);
+									setTimeout(requestData5, 10000);
+								  });
+						  }
+								
+								chart5 = Highcharts.chart('container5', {
+								chart: {
+									spacing : [40, 0 , 40, 0],
+								events:{
+									load: requestData5
+									}
+								},
+								title: {
+									floating:true,
+									text: 'The Optimization Portfolio'
+								},
+							credits:{
+								enabled: false
+								},
+								tooltip: {
+									pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+								},
+								plotOptions: {
+									pie: {
+										allowPointSelect: true,
+										cursor: 'pointer',
+										dataLabels: {
+											enabled: true,
+											format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+											style: {
+												color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+											}
+										},
+										point: {
+											events: {
+												mouseOver: function(e) {  
+													chart.setTitle({
+														text: e.target.name+ '\t'+'$'+ e.target.y
+													});
+												}
+											}
+										},
+									}
+								},
+								series: [{
+									type: 'pie',
+									innerSize: '80%',
+									name: 'Proportion',
+									data: []
+								}]
+							}, function(c) { 
+								var centerY = c.series[0].center[1],
+									titleHeight = parseInt(c.title.styles.fontSize);
+								c.setTitle({
+									y:centerY + titleHeight/2
+								});
+							}); 
+							</script>
+							</td>
+							
+							<!-- 小表中第二行第三四列，prediction-->
+							<td align="center" width=400px height=300px class="formuse" colspan = "2">
+							<div id="container6" style="max-width:800px;height:300px"></div>
+							<script>
+								var chart6;
+								function requestData6(){
+									$.getJSON('./json/optimization_prediction.json', function (data) {
+										//alert("bbbb");
+										  chart6.series[0].setData(data);    
+									  });
+									$.getJSON('./json/Initial_prediction.json', function (data) {
+										//alert("bbbb");
+										  chart6.series[1].setData(data);    
+									  });
+									setTimeout(requestData6, 10000);
+									}
+								
+								
+							$(document).ready(function() {	
+								chart6 = Highcharts.chart('container6', {
+									chart: {
+											  zoomType: 'x',
+											  events: {
+												load: requestData6
+												}
+											},	
+												
+							title: {
+									text: 'Average Expected Return Prediction'
+							},
+							subtitle: {
+										  text: document.ontouchstart === undefined ?
+										  'Mouse Drag to Zoom' : 'Gesture Operation to Zoom'
+									  },
+							xAxis: {
+										categories:['last close price', '1st month', '2nd month', '3rd month', '4th month', '5th month', '6th month', '7th month', '8th month', '9th month', '10th month', '11th month', '12th month', '13th month', '14th month', '15th month', '16th month', '17th month', '18th month', '19th month', '20th month', '21st month', '22nd month', '23rd month'],
+										  title: {
+											  text: 'Investment Period'
+										  },
+									  },		  
+							yAxis: {
+									title: {
+											text: 'Total Value'
+									}
+							},
+							legend: {
+									layout: 'vertical',
+									align: 'right',
+									verticalAlign: 'middle'
+							},
+							/*
+							plotOptions: {
+									series: {
+											label: {
+													connectorAllowed: false
+											},
+											pointStart: 2010
+									}
+							},*/
+							plotOptions: {
+								area: {
+									fillColor: {
+										linearGradient: {
+											x1: 0,
+											y1: 0,
+											x2: 0,
+											y2: 1
+										},
+										stops: [
+											[0, Highcharts.getOptions().colors[0]],
+											[1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+										]
+									},
+									marker: {
+										radius: 2
+									},
+									lineWidth: 1,
+									states: {
+										hover: {
+											lineWidth: 1
+										}
+									},
+									threshold: null
+								}
+							},
+							series: [{
+									name: 'Optimization Portfolio',
+									//data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+									data:[]
+							}, {
+									name: 'Initial Portfolio',
+									//data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+									data:[]
+							}],
+							responsive: {
+									rules: [{
+											condition: {
+													maxWidth: 500
+											},
+											chartOptions: {
+													legend: {
+															layout: 'horizontal',
+															align: 'center',
+															verticalAlign: 'bottom'
+													}
+											}
+									}]
+							}
+					});
+					});
+							</script>
+							</td>
+							
+						</tr>
+					</table>
+				</td>
 
-                  $(document).ready(function() {
-                    chart3 = Highcharts.stockChart('container3', {
-                        chart: {
+			</tr>
+			<tr>
+				<td align = 'center' width = 1600px height = 500 class = "pageuse">
+				<p id="time1" style="font-size: 35px">
+				Note: 
+				<br/>
+				The product is based on Highchart Cloud Service, some browsers may meet display problem because of Same Origin Policy
+				<br/>
+				<br/>
+				Features Explanation
+				<br/>
+				Visualization for no programming knowledge investors to do optimum portfolio.
+				<br/>
+				The upper left pie chart is your initial investment, other three pie charts are optimization portfolio we recommand.
+				<br/>
+				You could see the return and tracking error comparation from  right side.
+				<br/>
+				Tips: This is a product compatible for PC, ipad, phone. Each chart has unique dynamic function, you could download charts by the button.
+				</td>
 
-                            zoomType: 'x',
-                            events: {
-                              load: requestData3
-                              /*,
-                              redraw: function () {
-      										                var label = this.renderer.label('Chart Reloaded', 10, 10)
-      										                .attr({
-      												               fill: Highcharts.getOptions().colors[0],
-      												               padding: 10,
-      												               r: 5,
-      												               zIndex: 8
-      										                })
-      										                .css({
-      												               color: '#FFFFFF'
-      										                })
-      										                .add();
-                                          setTimeout(function () {
-      												               label.fadeOut();
-      										                }, 2000);
-      								            } */
-                            }
-                        },
-                        credits: {
-                              enabled: false
-                        },
-                        exporting: {
-                             enabled: false
-                        },
-                        title: {
-                            text: '每日人数'
-                        },
-                        xAxis: {
-                            type: 'datetime',
-                            dateTimeLabelFormats: {
-                                millisecond: '%H:%M:%S.%L',
-                                second: '%H:%M:%S',
-                                minute: '%H:%M',
-                                hour: '%H:%M',
-                                day: '%m-%d',
-                                week: '%m-%d',
-                                month: '%Y-%m',
-                                year: '%Y'
-                            }
-                        },
-                        tooltip: {
-                            dateTimeLabelFormats: {
-                                millisecond: '%H:%M:%S.%L',
-                                second: '%H:%M:%S',
-                                minute: '%H:%M',
-                                hour: '%H:%M',
-                                day: '%Y-%m-%d',
-                                week: '%m-%d',
-                                month: '%Y-%m',
-                                year: '%Y'
-                            }
-                        },
-                        yAxis: {
-                            title: {
-                                text: '人数'
-                            }
-                        },
-                        rangeSelector: {
-                            buttons: [{
-                                count: 3,
-                                type: 'month',
-                                text: '季度'
-                            }, {
-                                count: 1,
-                                type: 'month',
-                                text: '月'
-                            }, {
-                                type: 'all',
-                                text: 'All'
-                            }],
-                            inputEnabled: true,
-                            selected: 0
-                        },
-                        navigator: {
-                          series: {
-                            type: 'area'
-                          }
-                        },
-                        legend: {
-                          enabled: true,
-                          align: 'right',
-                          layout: 'vertical',
-                          verticalAlign: 'top',
-                          y: 180,
-                        },
-                        plotOptions: {
-                            area: {
-                                fillColor: {
-                                    linearGradient: {
-                                        x1: 0,
-                                        y1: 0,
-                                        x2: 0,
-                                        y2: 1
-                                    },
-                                    stops: [
-                                        [0, Highcharts.getOptions().colors[0]],
-                                        [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
-                                    ]
-                                },
-                                marker: {
-                                    radius: 2
-                                },
-                                lineWidth: 1,
-                                states: {
-                                    hover: {
-                                        lineWidth: 1
-                                    }
-                                },
-                                threshold: null
-                            }
-                        },
-                        series: [{
-                            type: 'line',
-                            name: '状态<6',
-                            showInNavigator: false,
-                            data: []
-                        },{
-                            type: 'line',
-                            name: '状态=6',
-                            showInNavigator: false,
-                            data: []
-                        },{
-                            type: 'line',
-                            name: '状态>6',
-                            showInNavigator: true,
-                            data: []
-                        }]
-                    });
-			            });
-			        </script>
-				    </td>
-				    <td width=20px >
-				    </td>
-				    <td align="right" width=840px class="formuse">
-				    <div id="container4" style="min-width:840px;height:400px"></div>
-			        <script>
-		              var chart4;
-		              function requestData4(){
-		                $.getJSON('./day_7_state_5.json', function (data) {
-		                    for (var i = 0; i < data.length; i++){
-		                        var date = new Date(data[i][0]);
-		                        var year = date.getUTCFullYear();
-		                        var month = date.getUTCMonth();
-		                        var day = date.getUTCDate();
-		                        data[i][0] = Date.UTC(year, month, day + 1);
-		                    }
-		                    chart4.series[0].setData(data);
-		                });
-		                $.getJSON('./day_7_state_6.json', function (data) {
-		                    for (var i = 0; i < data.length; i++){
-		                        var date = new Date(data[i][0]);
-		                        var year = date.getUTCFullYear();
-		                        var month = date.getUTCMonth();
-		                        var day = date.getUTCDate();
-		                        data[i][0] = Date.UTC(year, month, day + 1);
-		                    }
-		                    chart4.series[1].setData(data);
-		                });
-		                $.getJSON('./day_7_state_7.json', function (data) {
-		                    for (var i = 0; i < data.length; i++){
-		                        var date = new Date(data[i][0]);
-		                        var year = date.getUTCFullYear();
-		                        var month = date.getUTCMonth();
-		                        var day = date.getUTCDate();
-		                        data[i][0] = Date.UTC(year, month, day + 1);
-		                    }
-		                    chart4.series[2].setData(data);
-		                });
-		                setTimeout(requestData4, 10000);
-		              }
-		
-		              $(document).ready(function() {
-		
-		                  chart4 = Highcharts.chart('container4', {
-		                  chart: {
-		                      type: 'column',
-		                      events: {
-		                        load: requestData4
-		                      }
-		                  },
-		                  credits: {
-		                        enabled: false
-		                  },
-		                  exporting: {
-		                       enabled: false
-		                  },
-		                  title: {
-		                      text: '一周病例分布'
-		                  },
-		                  xAxis: {
-		                      type: 'datetime',
-		                      minTickInterval: 24 * 60 * 60 * 1000,
-		                      dateTimeLabelFormats: {
-		                          day: '%Y-%m-%d<br/>%A'
-		                      }
-		                  },
-		                  yAxis: {
-		                      min: 0,
-		                      title: {
-		                          text: '人数'
-		                      },
-		                      stackLabels: {  // 堆叠数据标签
-		                          enabled: true,
-		                          style: {
-		                              fontWeight: 'bold',
-		                              color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
-		                          }
-		                      }
-		                  },
-		                  legend: {
-		                      align: 'right',
-		                      x: -30,
-		                      verticalAlign: 'top',
-		                      y: 25,
-		                      floating: true,
-		                      backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
-		                      borderColor: '#CCC',
-		                      borderWidth: 1,
-		                      shadow: false
-		                  },
-		                  tooltip: {
-		                      formatter: function () {
-		                          return '<b>' + this.x + '</b><br/>' +
-		                              this.series.name + ': ' + this.y + '<br/>' +
-		                              '总量: ' + this.point.stackTotal;
-		                      }
-		                  },
-		                  plotOptions: {
-		                      column: {
-		                          stacking: 'normal',
-		                          dataLabels: {
-		                              enabled: true,
-		                              color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-		                              style: {
-		                                  // 如果不需要数据标签阴影，可以将 textOutline 设置为 'none'
-		                                  textOutline: '1px 1px black'
-		                              }
-		                          }
-		                      }
-		                  },
-		                  series: [{
-		                      name: '状态<6',
-		                      data: []
-		                  }, {
-		                      name: '状态=6',
-		                      data: []
-		                  }, {
-		                      name: '状态>6',
-		                      data: []
-		                  }]
-		                  });
-		              });
-			        </script>
-
-				    </td>
-			    </tr>
-		    </table>
-		    </td>
-		    <td width=20px>
-		    </td>
-	    </tr>
-	    <tr>
-		    <td colspan="6" height="20">
-		    </td>
-	    </tr>
-    </table>
+			</tr>
+			<tr>
+				<td width = 1800px>
+				<div id="down_side" style="min-width:1600px;height:30px"></div>
+				</td>
+			</tr>
+				
     </body>
 </html>
