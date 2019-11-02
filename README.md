@@ -23,8 +23,11 @@ Using Sequential Least Squares Programming Algorithm(SLSP) for optimization.
 
 # 5 Real stocks optimization portfolio optimization
 ![Alt text](results/2.png)
+
 ![Alt text](results/3.png)
+
 ![Alt text](results/4.png)
+
 Ppresen/Pinitial, standardized with 100 histogram of yield distribution
 ![Alt text](results/5.png)
 Return, Volatility and Sharp Rate Scatter Plots of 5000 Portfolios 
