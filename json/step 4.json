@@ -1,0 +1,243 @@
+{
+ "Holdings": [
+  {
+   "Asset": "CX_IE00BY7QL619_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 95.7813100202294,
+   "OptimizedQuantity": 95.7813100202294
+  },
+  {
+   "Asset": "CX_US02079KAA51_USD",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US031162BG42_USD",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US031162BK53_USD",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US03232PAD06_USD",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US0533321024_NYQ",
+   "Quantity": 14,
+   "OptimizedTrade": 10.6575166550357,
+   "OptimizedQuantity": 24.6575166550357
+  },
+  {
+   "Asset": "CX_US0584981064_NYQ",
+   "Quantity": 162,
+   "OptimizedTrade": -127.528282992308,
+   "OptimizedQuantity": 34.47171700769201
+  },
+  {
+   "Asset": "CX_US1696561059_NYQ",
+   "Quantity": 67,
+   "OptimizedTrade": -67,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US1912161007_NYQ",
+   "Quantity": 68,
+   "OptimizedTrade": -68,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US29379VAY92_USD",
+   "Quantity": 67,
+   "OptimizedTrade": 88.3012012436256,
+   "OptimizedQuantity": 155.3012012436256
+  },
+  {
+   "Asset": "CX_US30231GAN25_USD",
+   "Quantity": 68,
+   "OptimizedTrade": -68,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US46120E6023_NSQ",
+   "Quantity": 13,
+   "OptimizedTrade": -13,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US4642851053_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US4642871762_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US4642872000_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 80.8614327296248,
+   "OptimizedQuantity": 80.8614327296248
+  },
+  {
+   "Asset": "CX_US4642872422_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US4642874329_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US4642874402_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US4642874576_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US4642874659_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US4642875078_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US4642875987_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US4642876142_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US4642878049_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US4642882819_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US4642884146_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US4642885135_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 200.681056086516,
+   "OptimizedQuantity": 200.681056086516
+  },
+  {
+   "Asset": "CX_US4642885887_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US4642886463_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US4642886612_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US4642886877_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US46434G1031_NYQ",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US4878361082_NYQ",
+   "Quantity": 67,
+   "OptimizedTrade": -67,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US5486611073_NYQ",
+   "Quantity": 67,
+   "OptimizedTrade": 57.7447930745155,
+   "OptimizedQuantity": 124.7447930745155
+  },
+  {
+   "Asset": "CX_US56585AAG76_USD",
+   "Quantity": 67,
+   "OptimizedTrade": -67,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US651639AN69_USD",
+   "Quantity": 67,
+   "OptimizedTrade": -67,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US70450Y1038_NSQ",
+   "Quantity": 67,
+   "OptimizedTrade": 118.512544127462,
+   "OptimizedQuantity": 185.51254412746198
+  },
+  {
+   "Asset": "CX_US9100471096_NYQ",
+   "Quantity": 67,
+   "OptimizedTrade": 40.1923888487988,
+   "OptimizedQuantity": 107.1923888487988
+  },
+  {
+   "Asset": "CX_US912810EJ35_USD",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  },
+  {
+   "Asset": "CX_US912810PX00_USD",
+   "Quantity": 0,
+   "OptimizedTrade": 0,
+   "OptimizedQuantity": 0
+  }
+ ],
